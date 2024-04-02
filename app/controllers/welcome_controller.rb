@@ -1,0 +1,11 @@
+class WelcomeController < ApplicationController
+  def index
+    @very_important_content = <<-CONTENT
+      Attack feet behind the couch destroy couch flop over give attitude hide when guests come over hopped up on goofballs hunt anything that moves stand in front of the computer screen chew ipad power cord swat at dog, intently sniff hand intently stare at the same spot intrigued by the shower rub face on everything chase mice chase imaginary bugs why must they do that inspect anything brought into the house claw drapes, need to chase tail.
+      Intently stare at the same spot why must they do that chew ipad power cord , hunt anything that moves swat at dog stand in front of the computer screen. Chew ipad power cord claw drapes hopped up on goofballs chase imaginary bugs need to chase tail why must they do that intrigued by the shower hunt anything that moves swat at dog attack feet inspect anything brought into the house, flop over destroy couch hide when guests come over chase mice give attitude flop over.
+      Inspect anything brought into the house chase imaginary bugs chew ipad power cord destroy couch intently stare at the same spot swat at dog, rub face on everything hide when guests come over claw drapes hopped up on goofballs hunt anything that moves need to chase tail chase mice stand in front of the computer screen, behind the couch attack feet intrigued by the shower intently sniff hand swat at dog hide when guests come over.
+      Stand in front of the computer screen hopped up on goofballs attack feet intently sniff hand destroy couch why must they do that swat at dog intrigued by the shower give attitude claw drapes chase mice inspect anything brought into the house behind the couch, flop over chase imaginary bugs chew ipad power cord intently stare at the same spot hide when guests come over need to chase tail hunt anything that moves rub face on everything.
+      Hunt anything that moves destroy couch intently stare at the same spot stand in front of the computer screen need to chase tail claw drapes chase imaginary bugs behind the couch, intrigued by the shower rub face on everything chew ipad power cord hide when guests come over hopped up on goofballs chase mice, intently sniff hand attack feet inspect anything brought into the house swat at dog flop over destroy couch.
+    CONTENT
+  end
+end
