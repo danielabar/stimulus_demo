@@ -1,11 +1,17 @@
 <div class="py-8 px-4">
   <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6">
     <div id="content-container" data-controller="clipboard">
-      <div id="content">
-        <%= @very_important_content %>
+      <div
+        data-clipboard-target="content"
+        id="content">
+          <%= @very_important_content %>
       </div>
       <div id="controls" class="mt-4 flex justify-end">
-        <button class="py-2 px-4 bg-gray-200 rounded-md shadow-md hover:bg-gray-300 transition-colors">Copy</button>
+        <button
+          data-action="clipboard#copy"
+          class="py-2 px-4 bg-gray-200 rounded-md shadow-md hover:bg-gray-300 transition-colors">
+            Copy
+        </button>
       </div>
     </div>
   </div>
