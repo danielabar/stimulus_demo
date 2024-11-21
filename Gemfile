@@ -86,7 +86,6 @@ group :development do
   gem "rubocop-thread_safety"
   gem "rubocop-factory_bot"
   gem "rubocop-capybara"
-  gem "solargraph"
 end
 
 group :test do
