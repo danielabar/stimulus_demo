@@ -12,9 +12,16 @@ export default class extends Controller {
   //---------------------------------------------------
   // data-clipboard-confirm-value="foo"     this.confirmValue
   // data-clipboard-delay-ms-value="num ms" this.delayMsValue
+  // data-clipboard-copy-text-value="bar"   this.copyTextValue
   static values = {
-    confirm: { type: String, default: 'Copied' },
-    delayMs: { type: Number, default: 2000 }
+    confirm: { type: String, default: 'Done' },
+    delayMs: { type: Number, default: 2000 },
+    copyText: { type: String, default: 'Copy' }
+  }
+
+  // temp debug to confirm data attributes are refreshed when language is switched
+  connect() {
+    console.log("=== Clipboard Controller connected: copyTextValue: " + this.copyTextValue + ", confirmValue: " + this.confirmValue + ", delayMsValue: " + this.delayMsValue)
   }
 
   copy() {
@@ -23,7 +30,7 @@ export default class extends Controller {
       .then(() => {
         this.buttonTarget.textContent = this.confirmValue;
         setTimeout(() => {
-          this.buttonTarget.textContent = "Copy";
+          this.buttonTarget.textContent = this.copyTextValue;
         }, this.delayMsValue);
       })
       .catch((error) => {

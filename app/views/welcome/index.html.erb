@@ -1,19 +1,21 @@
 <div class="py-8 px-4">
   <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6">
-    <div data-controller="clipboard"
-        data-clipboard-confirm-value="Done"
-        data-clipboard-delay-ms-value="3000">
-      <div
-        data-clipboard-target="content"
-        id="content">
+    <div
+      data-controller="clipboard"
+      data-clipboard-confirm-value="<%= t('clipboard.done') %>"
+      data-clipboard-delay-ms-value="3000"
+      data-clipboard-copy-text-value="<%= t('clipboard.copy') %>">
+
+      <div data-clipboard-target="content" id="content">
           <%= @very_important_content %>
       </div>
+
       <div id="controls" class="mt-4 flex justify-end">
         <button
           data-action="clipboard#copy"
           data-clipboard-target="button"
           class="py-2 px-4 bg-gray-200 rounded-md shadow-md hover:bg-gray-300 transition-colors">
-            Copy
+            <%= t('clipboard.copy') %>
         </button>
       </div>
     </div>

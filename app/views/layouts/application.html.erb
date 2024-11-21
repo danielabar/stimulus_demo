@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%= I18n.locale %>">
   <head>
     <title>StimulusDemo</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <body class="bg-gray-200">
-      <main class="container mx-auto mt-10 px-4 flex justify-center items-center h-full">
-        <%= yield %>
-      </main>
-    </body>
+  <body class="bg-gray-200">
+    <header class="bg-white shadow-md py-4">
+      <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+        <div>
+          <h1 class="text-2xl font-semibold text-gray-800">StimulusDemo</h1>
+        </div>
+
+        <div class="flex items-center space-x-6 ml-auto">
+          <%= link_to "English", url_for(locale: :en), class: "text-gray-700 hover:text-blue-500 font-medium" %>
+          <span class="text-gray-600">|</span>
+          <%= link_to "Español", url_for(locale: :es), class: "text-gray-700 hover:text-blue-500 font-medium" %>
+        </div>
+      </div>
+    </header>
+
+    <main class="container mx-auto mt-10 px-4 flex justify-center items-center h-full">
+      <%= yield %>
+    </main>
   </body>
 </html>
